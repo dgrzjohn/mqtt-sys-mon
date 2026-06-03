@@ -10,11 +10,11 @@ WorkingDirectory=/path/to/mqtt-sys-mon
 
 # --- EXECUTION OPTIONS ---
 
-# Option A: If using a virtual environment (.venv)
-ExecStart=/path/to/mqtt-sys-mon/venv/bin/python3 /path/to/mqtt-sys-mon/mqtt_sys_mon.py
+# Option 1: If using system-wide python package dependencies
+ExecStart=/usr/bin/python3 /path/to/mqtt-sys-mon/mqtt_sys_mon.py
 
-# Option B: If using system-wide python package dependencies
-# ExecStart=/usr/bin/python3 /path/to/mqtt-sys-mon/mqtt_sys_mon.py
+# Option 2: If using a virtual environment (.venv)
+# ExecStart=/path/to/mqtt-sys-mon/venv/bin/python3 /path/to/mqtt-sys-mon/mqtt_sys_mon.py
 
 Restart=always
 RestartSec=10
