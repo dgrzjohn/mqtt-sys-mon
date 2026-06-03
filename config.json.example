@@ -1,0 +1,21 @@
+{
+  "mqtt": {
+    "host": "YOUR_MQTT_BROKER_IP",          // IP address of your MQTT Broker (Home Assistant MQTT addon or Mosquitto)
+    "port": 1883,                    // Port (default 1883)
+    "username": "mqtt_user",         // MQTT username
+    "password": "mqtt_password",     // MQTT password
+    "client_id": "sys_mon_myhost",   // Unique client ID (leave blank to auto-generate based on hostname)
+    "keepalive": 60,
+    "discovery_prefix": "homeassistant" // Default HA discovery prefix
+  },
+  "sensor": {
+    "hostname": "Proxmox-Host",      // Display name of the device in Home Assistant (leave blank to auto-detect hostname)
+    "interval": 30,                  // Polling rate in seconds (default 30)
+    "temperature_sensor_key": "auto",// Use "auto" or set specific psutil sensor key (e.g. "coretemp")
+    "temperature_unit": "C",         // Temperature unit: "C" (default) or "F" for Fahrenheit conversion
+    "ram_metrics": "used_percent",   // RAM metrics: "used_percent" (default), "free_total", or "both"
+    "disks": [
+      "/"                            // List of disk mount points/drive letters to monitor (e.g. ["/"] for Linux, ["C:\\"] for Windows)
+    ]
+  }
+}z
