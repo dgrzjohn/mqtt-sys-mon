@@ -252,6 +252,7 @@ class SystemMonitor:
                 "id": "cpu_temp",
                 "name": "CPU Temperature",
                 "unit": unit_symbol,
+                "unit_of_measurement": unit_symbol,
                 "device_class": "temperature",
                 "icon": "mdi:thermometer",
                 "val_tpl": "{{ value_json.cpu_temp }}"
